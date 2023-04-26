@@ -1,5 +1,7 @@
 import { NavLink, Routes, Route } from "react-router-dom";
+import Home from "./page/Home";
 import NotFound from "./page/NotFound";
+import News from "./page/News";
 
 export const App = () => {
   return (
@@ -11,8 +13,8 @@ export const App = () => {
         <NavLink to='/login'>LogIn</NavLink>
       </nav>
       <Routes>
-        <Route path='/' element={<div>Home</div>} />
-        <Route path='/news' element={<div>News</div>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/news' element={<News />} />
         <Route path='/news/:newId' element={<div>News element</div>} />
         <Route path='/registr' element={<div>Registration</div>} />
         <Route path='/login' element={<div>LogIn</div>} />

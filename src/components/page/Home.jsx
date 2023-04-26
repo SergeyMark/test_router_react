@@ -1,9 +1,4 @@
-const { useEffect } = require("react")
-
-const Home = () => {
-    useEffect(()=>{
-        // http 
-    }, [])
+const Home = () => {  
 
     return (
         <>
@@ -11,3 +6,5 @@ const Home = () => {
         </>
     )
 }
+
+export default Home;
