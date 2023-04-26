@@ -4,6 +4,7 @@ import NotFound from "./page/NotFound";
 import News from "./page/News";
 import NewsDetails from "./page/NewsDetails";
 import Layout from "./Layout";
+import Gallery from "./page/Gallery";
 
 export const App = () => {
   return (
@@ -12,7 +13,9 @@ export const App = () => {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='news' element={<News />} />
-          <Route path='news/:newId' element={<NewsDetails />} />
+          <Route path='news/:newId' element={<NewsDetails />}>
+            <Route path="gallery" element={<Gallery />} />
+          </Route>
           <Route path='registr' element={<div>Registration</div>} />
           <Route path='login' element={<div>LogIn</div>} />
           <Route path="*" element={<NotFound />} />
