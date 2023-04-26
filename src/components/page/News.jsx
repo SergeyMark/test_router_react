@@ -7,9 +7,11 @@ const News = () => {
     return(
         <div>
             <h1>News List</h1>
-            {newsArr.map(news => {
-            return <Link key={news} to={`/`}>{news}</Link>;
-        })}
+            <ul>
+                {newsArr.map(news => {
+                    return <li key={news}><Link to={`${news}`}>{news}</Link></li>;
+                })}
+            </ul>
         </div>
     );
 };
