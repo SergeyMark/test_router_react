@@ -19,8 +19,6 @@ const News = () => {
 
     const visibleNews = news.filter(newsOne => newsOne.includes(newId))
 
-    console.log(location)
-
     return(
         <div>
             <h1>News List</h1>

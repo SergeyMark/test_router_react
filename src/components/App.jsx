@@ -7,8 +7,8 @@ import Layout from "./Layout";
 // import Gallery from "./page/Gallery";
 import { lazy } from "react";
 
-const Home = lazy(()=> import('../components/page/Home'))
-const NotFound = lazy(()=> import('../components/page/NotFound'))
+const Home = lazy(()=> import('./page/Home'))
+const NotFound = lazy(()=> import('./page/NotFound'))
 const News = lazy(()=> import('./page/News'))
 const NewsDetails = lazy(()=> import('./page/NewsDetails'))
 const Gallery = lazy(()=> import('./page/Gallery'))

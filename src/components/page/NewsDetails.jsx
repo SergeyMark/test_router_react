@@ -1,4 +1,5 @@
-import { useRef } from "react";
+import { Loading } from "components/Loading/Loading";
+import { Suspense, useRef } from "react";
 import { Link, Outlet, useParams, useLocation } from "react-router-dom";
 
 
@@ -6,8 +7,6 @@ const NewsDetails = () => {
     const location = useLocation();
     const backLocationRef = useRef(location.state?.from ?? '/news')
     const {newId} = useParams();
-
-    console.log(location)
 
     return(
         <>
@@ -18,7 +17,9 @@ const NewsDetails = () => {
                     <Link to="gallery">Gallery</Link>
                 </li>
             </ul>
-            <Outlet />
+            <Suspense fallback={<Loading />}>
+                <Outlet />
+            </Suspense>
         </>
     )
 }
