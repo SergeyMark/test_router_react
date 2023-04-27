@@ -1,10 +1,20 @@
 import {Routes, Route } from "react-router-dom";
-import Home from "./page/Home";
-import NotFound from "./page/NotFound";
-import News from "./page/News";
-import NewsDetails from "./page/NewsDetails";
+// import Home from "./page/Home";
+// import NotFound from "./page/NotFound";
+// import News from "./page/News";
+// import NewsDetails from "./page/NewsDetails";
 import Layout from "./Layout";
-import Gallery from "./page/Gallery";
+// import Gallery from "./page/Gallery";
+import { lazy } from "react";
+
+const Home = lazy(()=> import('../components/page/Home'))
+const NotFound = lazy(()=> import('../components/page/NotFound'))
+const News = lazy(()=> import('./page/News'))
+const NewsDetails = lazy(()=> import('./page/NewsDetails'))
+const Gallery = lazy(()=> import('./page/Gallery'))
+ 
+
+
 
 export const App = () => {
   return (

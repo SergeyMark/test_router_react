@@ -6,7 +6,7 @@ const Gallery = () => {
 
     return(
         <>
-            {paramsImg.newId} <img src="" alt="Gallery" />
+            {paramsImg.newId} <img src='' alt="Gallery" />
         </>
     )
 }
